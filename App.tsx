@@ -31,7 +31,7 @@ function App(): JSX.Element {
           <Stack.Screen name="About" component={AboutPage} />
         </Stack.Navigator>
       </NavigationContainer>
-      <BottomNavigationBar />
+      {/* <BottomNavigationBar /> */}
     </GluestackUIProvider>
   );
 }
