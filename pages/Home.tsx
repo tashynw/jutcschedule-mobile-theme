@@ -5,10 +5,27 @@ import {
   Heading,
   Icon,
   ScrollView,
+  Select,
+  SelectBackdrop,
+  SelectContent,
+  SelectDragIndicator,
+  SelectDragIndicatorWrapper,
+  SelectIcon,
+  SelectInput,
+  SelectItem,
+  SelectPortal,
+  SelectTrigger,
   Text,
   VStack,
 } from '@gluestack-ui/themed';
-import {BellDot, BusFront, ChevronLeft, Menu, Route} from 'lucide-react-native';
+import {
+  BellDot,
+  BusFront,
+  ChevronDownIcon,
+  ChevronLeft,
+  Menu,
+  Route,
+} from 'lucide-react-native';
 import React from 'react';
 import {Dimensions, SafeAreaView, TouchableOpacity} from 'react-native';
 
@@ -37,10 +54,10 @@ const Home = ({navigation}: Props) => {
           </HStack>
           <VStack gap="$1">
             <Heading size="3xl" fontWeight="$semibold">
-              Route 23
+              JUTC-3421243
             </Heading>
             <Text size="lg" color="$coolGray500" fontWeight="$semibold">
-              Bus Number JUTC-3421243
+              Route 23
             </Text>
           </VStack>
           {/* <ScrollView horizontal={true} borderWidth={2} h={100}> */}
@@ -115,6 +132,30 @@ const Home = ({navigation}: Props) => {
               </VStack>
             </Box>
           </HStack>
+          <Select mt="$5">
+            <SelectTrigger variant="outline" size="md">
+              <SelectInput
+                placeholder="Filter by time range"
+                fontWeight="$semibold"
+              />
+              <SelectIcon mr="$3">
+                <Icon as={ChevronDownIcon} />
+              </SelectIcon>
+            </SelectTrigger>
+            <SelectPortal borderRadius="$2xl">
+              <SelectBackdrop />
+              <SelectContent>
+                <SelectDragIndicatorWrapper>
+                  <SelectDragIndicator />
+                </SelectDragIndicatorWrapper>
+                <SelectItem label="In the next 2 hours" value="1" />
+                <SelectItem label="In the next hour" value="2" />
+                <SelectItem label="Within 15 mins" value="3" />
+                <SelectItem label="1 hour ago" value="4" />
+                <SelectItem label="2 hours ago" value="5" />
+              </SelectContent>
+            </SelectPortal>
+          </Select>
           {/* </ScrollView> */}
           <VStack borderRadius="$2xl" alignItems="flex-start" mt="$6">
             <HStack
@@ -149,7 +190,7 @@ const Home = ({navigation}: Props) => {
                 </VStack>
               </HStack>
             </HStack>
-            <HStack
+            <VStack
               justifyContent="space-between"
               p="$5"
               w="$full"
@@ -159,23 +200,29 @@ const Home = ({navigation}: Props) => {
               borderRightWidth={1}
               borderBottomWidth={1}
               borderColor="$coolGray300">
-              <VStack w={160}>
-                <Heading size="md" color="$coolGray400" fontWeight="$medium">
+              <HStack
+                w="100%"
+                justifyContent="space-between"
+                alignItems="center">
+                <Heading size="md" color="$coolGray500" fontWeight="$medium">
                   Spanish Town Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
                   12:40 pm
                 </Heading>
-              </VStack>
-              <VStack w={160}>
-                <Heading size="md" color="$coolGray400" fontWeight="$medium">
+              </HStack>
+              <HStack
+                w="100%"
+                justifyContent="space-between"
+                alignItems="center">
+                <Heading size="md" color="$coolGray500" fontWeight="$medium">
                   Half-way-Tree Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
                   1:45 pm
                 </Heading>
-              </VStack>
-            </HStack>
+              </HStack>
+            </VStack>
           </VStack>
           <VStack borderRadius="$2xl" alignItems="flex-start" mt="$6">
             <HStack
@@ -210,7 +257,7 @@ const Home = ({navigation}: Props) => {
                 </VStack>
               </HStack>
             </HStack>
-            <HStack
+            <VStack
               justifyContent="space-between"
               p="$5"
               w="$full"
@@ -220,23 +267,29 @@ const Home = ({navigation}: Props) => {
               borderRightWidth={1}
               borderBottomWidth={1}
               borderColor="$coolGray300">
-              <VStack w={160}>
-                <Heading size="md" color="$coolGray400" fontWeight="$medium">
+              <HStack
+                w="100%"
+                alignItems="center"
+                justifyContent="space-between">
+                <Heading size="md" color="$coolGray500" fontWeight="$medium">
                   Half-way-Tree Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
                   3:45 pm
                 </Heading>
-              </VStack>
-              <VStack w={160}>
-                <Heading size="md" color="$coolGray400" fontWeight="$medium">
+              </HStack>
+              <HStack
+                w="100%"
+                alignItems="center"
+                justifyContent="space-between">
+                <Heading size="md" color="$coolGray500" fontWeight="$medium">
                   Spanish Town Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
                   5:00 pm
                 </Heading>
-              </VStack>
-            </HStack>
+              </HStack>
+            </VStack>
           </VStack>
         </VStack>
       </ScrollView>
