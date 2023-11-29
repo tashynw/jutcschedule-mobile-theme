@@ -1,4 +1,6 @@
 import {
+  Badge,
+  BadgeText,
   Box,
   Divider,
   HStack,
@@ -56,9 +58,6 @@ const Home = ({navigation}: Props) => {
             <Heading size="3xl" fontWeight="$semibold">
               JUTC-3421243
             </Heading>
-            <Text size="lg" color="$coolGray500" fontWeight="$semibold">
-              Route 23
-            </Text>
           </VStack>
           {/* <ScrollView horizontal={true} borderWidth={2} h={100}> */}
           <HStack mt="$5" gap="$5" h={100}>
@@ -70,27 +69,9 @@ const Home = ({navigation}: Props) => {
               w={120}>
               <VStack justifyContent="center" alignItems="center">
                 <Text size="lg" color="$white" fontWeight="$semibold">
-                  MON
-                </Text>
-                <Text size="3xl" color="$white" fontWeight="$bold">
-                  27
-                </Text>
-              </VStack>
-            </Box>
-            <Box
-              bg="$coolGray100"
-              p="$4"
-              justifyContent="center"
-              borderRadius="$3xl"
-              borderWidth={1}
-              borderStyle="dashed"
-              borderColor="$coolGray400"
-              w={120}>
-              <VStack justifyContent="center" alignItems="center">
-                <Text size="lg" color="$green700" fontWeight="$semibold">
                   TUE
                 </Text>
-                <Text size="3xl" color="$green700" fontWeight="$bold">
+                <Text size="3xl" color="$white" fontWeight="$bold">
                   28
                 </Text>
               </VStack>
@@ -128,6 +109,24 @@ const Home = ({navigation}: Props) => {
                 </Text>
                 <Text size="3xl" color="$green700" fontWeight="$bold">
                   30
+                </Text>
+              </VStack>
+            </Box>
+            <Box
+              bg="$coolGray100"
+              p="$4"
+              justifyContent="center"
+              borderRadius="$3xl"
+              borderWidth={1}
+              borderStyle="dashed"
+              borderColor="$coolGray400"
+              w={120}>
+              <VStack justifyContent="center" alignItems="center">
+                <Text size="lg" color="$green700" fontWeight="$semibold">
+                  FRI
+                </Text>
+                <Text size="3xl" color="$green700" fontWeight="$bold">
+                  31
                 </Text>
               </VStack>
             </Box>
@@ -171,7 +170,7 @@ const Home = ({navigation}: Props) => {
                 <Icon as={Route} size={32 as any} />
                 <VStack alignItems="flex-start">
                   <Text fontWeight="$bold" size="xl">
-                    82 km
+                    27 km
                   </Text>
                   <Text color="$green600" fontWeight="$medium">
                     Journey
@@ -182,7 +181,7 @@ const Home = ({navigation}: Props) => {
                 <Icon as={BusFront} size={32 as any} />
                 <VStack alignItems="flex-start">
                   <Text fontWeight="$bold" size="xl">
-                    1.3 hours
+                    1 hours
                   </Text>
                   <Text color="$green600" fontWeight="$medium">
                     Trip Time
@@ -219,9 +218,12 @@ const Home = ({navigation}: Props) => {
                   Half-way-Tree Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
-                  1:45 pm
+                  1:40 pm
                 </Heading>
               </HStack>
+              <Badge size="md" variant="solid" action="success" mt="$3" w={75}>
+                <BadgeText fontWeight="$semibold">Route 23</BadgeText>
+              </Badge>
             </VStack>
           </VStack>
           <VStack borderRadius="$2xl" alignItems="flex-start" mt="$6">
@@ -238,7 +240,7 @@ const Home = ({navigation}: Props) => {
                 <Icon as={Route} size={32 as any} />
                 <VStack alignItems="flex-start">
                   <Text fontWeight="$bold" size="xl">
-                    82 km
+                    28.9 km
                   </Text>
                   <Text color="$green600" fontWeight="$medium">
                     Journey
@@ -249,7 +251,7 @@ const Home = ({navigation}: Props) => {
                 <Icon as={BusFront} size={32 as any} />
                 <VStack alignItems="flex-start">
                   <Text fontWeight="$bold" size="xl">
-                    1.3 hours
+                    1.2 hours
                   </Text>
                   <Text color="$green600" fontWeight="$medium">
                     Trip Time
@@ -272,7 +274,7 @@ const Home = ({navigation}: Props) => {
                 alignItems="center"
                 justifyContent="space-between">
                 <Heading size="md" color="$coolGray500" fontWeight="$medium">
-                  Half-way-Tree Bus Park
+                  Cross Roads Bus Park
                 </Heading>
                 <Heading size="lg" fontWeight="$bold">
                   3:45 pm
@@ -289,6 +291,9 @@ const Home = ({navigation}: Props) => {
                   5:00 pm
                 </Heading>
               </HStack>
+              <Badge size="md" variant="solid" action="success" mt="$3" w={80}>
+                <BadgeText fontWeight="$semibold">Route 21B</BadgeText>
+              </Badge>
             </VStack>
           </VStack>
         </VStack>
